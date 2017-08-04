@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-navbar color="dark">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Eventos</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card *ngFor="let evnt of evento">
+
+    <img src="assets/img/nin-live.png"/>
+
+    <ion-card-content>
+      <ion-card-header>
+        <strong> {{evnt.name}} </strong>
+      </ion-card-header>
+      <p>
+        {{evnt.message}}
+      </p>
+    </ion-card-content>
+
+    <ion-row no-padding>
+      <ion-col>
+        <button ion-button clear small color="danger" icon-start>
+          <ion-icon name='star'></ion-icon>Favorite</button>
+      </ion-col>
+      <ion-col text-right>
+        <button ion-button clear small color="danger" icon-start>
+          <ion-icon name='md-call'></ion-icon>Ligue {{evnt.phone}}</button>
+      </ion-col>
+    </ion-row>
+
+  </ion-card>
+
+</ion-content>
